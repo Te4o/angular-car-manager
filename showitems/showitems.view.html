@@ -1,0 +1,35 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Description</th>
+            <th>Registration number</th>
+            <th>Fuel type</th>
+            <th>Transmition</th>
+            <th>&nbsp;</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in vm.allUsers">
+            <td><input ng-model="user.brand" ng-disabled="!user.isEditable" /></td>
+            <td><input ng-model="user.lastName" ng-disabled="!user.isEditable" /></td>
+            <td><input ng-model="user.username" ng-disabled="!user.isEditable" /></td>
+            <td><input ng-model="user.password" ng-disabled="!user.isEditable" /></td>
+            <td><input ng-model="user.fuel" ng-disabled="!user.isEditable" /></td>
+            <td><input ng-model="user.transmition" ng-disabled="!user.isEditable" /></td>
+
+            <td>
+                <div class="btn-group action-buttons">
+                    <button class="btn btn-danger rembtn" ng-click="vm.deleteUser(user.id)" ng-disabled="form.$invalid || vm.dataLoading">Remove</button>
+                    <button class="btn btn-warning editbtn" ng-click="vm.editUser($event,user)">Edit</button>
+                    <button class="btn btn-info savebtn" ng-click="vm.saveEdit($event,user)" style="display:none">Save</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a ng-href="#" back-button class="link-back">
+    <span class="icon icon-arrow-left glyphicon glyphicon-chevron-left" aria-hidden="true"><strong> Back</strong></span>
+</a>

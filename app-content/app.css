@@ -1,0 +1,15 @@
+﻿.container {
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+.action-buttons {
+    width: 130px;
+}
+
+.savebtn {
+    width: 130px;
+}

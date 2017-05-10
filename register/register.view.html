@@ -1,0 +1,50 @@
+﻿<div class="col-md-6 col-md-offset-3">
+    <h2>Car register</h2>
+    <form name="form" ng-submit="vm.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.brand.$dirty && form.brand.$error.required }">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" class="form-control" ng-model="vm.user.brand" required />
+            <span ng-show="form.brand.$dirty && form.brand.$error.required" class="help-block">Brand name is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <label for="model">Model</label>
+            <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
+            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Model name is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username">Description</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Description is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Registration number</label>
+            <input type="text" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Registration is required</span>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.fuel.$dirty && form.fuel.$error.required }">
+            <label for="fuel">Fuel Type</label>
+            <input type="text" name="fuel" id="fuel" class="form-control" ng-model="vm.user.fuel" required />
+            <span ng-show="form.fuel.$dirty && form.fuel.$error.required" class="help-block">Fuel is required</span>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.transmition.$dirty && form.transmition.$error.required }">
+            <label for="transmition">Transmition</label>
+            <input type="text" name="transmition" id="transmition" class="form-control" ng-model="vm.user.transmition" required />
+            <span ng-show="form.transmition.$dirty && form.transmition.$error.required" class="help-block">Transmition is required</span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Add</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+            />
+            <a href="#!/" class="btn btn-link">Cancel</a>
+        </div>
+        <div>
+            <a ng-href="#" back-button class="link-back">
+                <span class="icon icon-arrow-left glyphicon glyphicon-chevron-left" aria-hidden="true"><strong> Back</strong></span></a>
+            </a>
+        </div>
+    </form>
+
+</div>
