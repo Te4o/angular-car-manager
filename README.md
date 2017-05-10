@@ -1,7 +1,7 @@
-angular-car-registration
+angular-car-manager
 ==============================
 
-AngularJS Car Registration
+AngularJS Car Manager
 
 To run the application you need to use a local web server to serve the files to your browser, 
 opening the index.html directly from the file system will not work.
@@ -16,13 +16,13 @@ Step 1: Install the http-server package from npm
 Step 2: Start a web server from a directory containing static website files
 
     Change to the directory containing the project static web files:
-    cd \projects\angular-car-registration
+    cd \projects\angular-car-manager
 
     Start the server with this command:
     http-server
 
     You should see something like the following:
-    C:\projects\angular-car-registration>http-server
+    C:\projects\angular-car-manager>http-server
     Starting up http-server, serving ./
     Available on:
     http://192.168.0.5:8080
